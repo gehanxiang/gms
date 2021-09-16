@@ -17,8 +17,8 @@
         <module>gms-feign-with-hystrix</module>
         <module>gms-hystrix-dashboard</module>
         <module>gms-hystrix-turbine</module>
-<!--        <module>microservice-config-server</module>-->
-<!--        <module>microservice-config-client</module>-->
+        <module>gms-config-server</module>
+        <module>gms-config-client</module>
 <!--        <module>microservice-config-server-eureka</module>-->
 <!--        <module>microservice-config-client-eureka</module>-->
 <!--        <module>microservice-api-gateway</module>-->
