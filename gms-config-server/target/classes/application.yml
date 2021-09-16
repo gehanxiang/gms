@@ -1,0 +1,52 @@
+server:
+  port: 8088
+spring:
+  application:
+    name: gms-configServer
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:gehanxiang/gms.git
+          search-paths: config-repo
+          strict-host-key-checking: false
+          private-key:
+            -----BEGIN OPENSSH PRIVATE KEY-----
+            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
+            -----END OPENSSH PRIVATE KEY-----
+

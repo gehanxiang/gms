@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: gms-configClient
+  cloud:
+    config:
+      uri: http://127.0.0.1:8088/
+      profile: dev
+      label: master
