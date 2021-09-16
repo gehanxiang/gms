@@ -62,5 +62,5 @@ spring:
             eJUwVA6Y7f95GFoCKQvBN1uP9uLardBQHNwP7fAUzcL9CDQCEDz2XZzf/WrjTQQ4
             DS+QjBesMkTABjbaTf0gSYEu+0T/LDN0j6RHY0ZAd+KRyDxVEMK6POZ5f5Y=
             -----END RSA PRIVATE KEY-----
-
+          default-label: main
 
