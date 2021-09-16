@@ -8,7 +8,6 @@ public class UserController {
 
     @GetMapping("/ack")
     public String findById() {
-        String ack = "hello world!";
-        return ack;
+        return "hello world!";
     }
 }
