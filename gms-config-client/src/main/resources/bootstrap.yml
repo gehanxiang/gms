@@ -5,4 +5,19 @@ spring:
     config:
       uri: http://127.0.0.1:8088/
       profile: dev
-      label: master
+      label: main
+      discovery:
+        enabled: true
+        service-id: gms-configServer
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8080/eureka/
+    fetch-registry: true
+    registry-fetch-interval-seconds: 8
+  instance:
+    lease-renewal-interval-in-seconds: 4
+    lease-expiration-duration-in-seconds: 12
+    prefer-ip-address: true
+
+
