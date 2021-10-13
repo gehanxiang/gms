@@ -21,7 +21,7 @@ public class UserController {
         boolean tryAcquire = limiter.tryAcquire(500, TimeUnit.MILLISECONDS);
 
         if (!tryAcquire) {
-            return "当前排队人数较多，请稍后再试！";
+            return "娘希匹，慢点行不行！";
         }
 
         return "hello world!";
