@@ -16,6 +16,7 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 import javax.servlet.http.HttpServletResponse;
 import java.lang.reflect.Method;
 import java.util.Map;
+import java.util.Objects;
 
 @Aspect
 @Component
@@ -30,7 +31,7 @@ public class LimitAop {
         Limit limit = method.getAnnotation(Limit.class);
         if (limit != null) {
             String key=limit.key();
-            RateLimiter rateLimiter = null;
+            RateLimiter rateLimiter;
             if (!limitMap.containsKey(key)) {
                 rateLimiter = RateLimiter.create(limit.permitsPerSecond());
                 limitMap.put(key, rateLimiter);
@@ -46,9 +47,8 @@ public class LimitAop {
     }
 
     private void responseFail(String msg)  {
-        HttpServletResponse response=((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getResponse();
+        HttpServletResponse response=((ServletRequestAttributes) Objects.requireNonNull(RequestContextHolder.getRequestAttributes())).getResponse();
         ResultData<Object> resultData = ResultData.fail(ReturnCode.LIMIT_ERROR.getCode(), msg);
         WebUtils.writeJson(response,resultData);
     }
-
 }

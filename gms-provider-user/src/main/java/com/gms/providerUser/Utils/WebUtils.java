@@ -25,7 +25,7 @@ public class WebUtils {
             response.getWriter().flush();
             response.getWriter().close();
         } catch (IOException e) {
-            log.error("writeData error",e);
+            log.error(e.getMessage());
         }
     }
 }
