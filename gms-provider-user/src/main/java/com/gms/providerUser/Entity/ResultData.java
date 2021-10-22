@@ -1,5 +1,6 @@
-package com.gms.providerUser.Common;
+package com.gms.providerUser.Entity;
 
+import com.gms.providerUser.Common.ReturnCode;
 import lombok.Data;
 
 @Data

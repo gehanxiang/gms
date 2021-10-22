@@ -1,6 +1,6 @@
 package com.gms.providerUser.Retention.AOP;
 
-import com.gms.providerUser.Common.ResultData;
+import com.gms.providerUser.Entity.ResultData;
 import com.gms.providerUser.Common.ReturnCode;
 import com.gms.providerUser.Retention.Limit;
 import com.gms.providerUser.Utils.WebUtils;
